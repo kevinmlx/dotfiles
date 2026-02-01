@@ -74,6 +74,9 @@ bindsym $mod+l focus right
 # ñ
 bindsym $mod+u exec /home/julian/.config/i3/scripts/keyboard.sh
 
+# modo hemingway
+bindsym $mod+i exec /home/julian/.config/i3/scripts/hemingway.sh
+
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+h move left
 bindsym $mod+Shift+j move down
