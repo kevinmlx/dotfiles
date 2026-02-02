@@ -1,7 +1,7 @@
 #!/bin/sh
 
 MONITOR="HDMI1"
-dpi=1
+dpi=192
 
 HDMI_STATUS=$(xrandr | grep "${MONITOR} connected")
 if [ -n "${HDMI_STATUS}" ]; then
