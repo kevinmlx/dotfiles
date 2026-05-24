@@ -92,7 +92,7 @@ exec swayidle -w \
     bindsym $mod+space exec $menu
 
     #explorer
-    bindsym $mod+e exec dolphin
+    bindsym $mod+e exec nautilus
 
     #bluetooth
     bindsym $mod+b exec kitty bluetui
@@ -255,8 +255,12 @@ bindsym Print exec ~/.config/sway/screenshot.sh
 bindsym $mod+Print exec ~/.config/sway/record.sh
 #power menu
 bindsym $mod+Escape exec ~/.config/sway/powermenu.sh
-#reminder
+#reminder (start/pause/resume)
 bindsym $mod+n exec ~/.config/sway/reminder.sh
+#reminder (cancel)
+bindsym $mod+Shift+n exec ~/.config/sway/reminder.sh cancel
+#keybindings help
+bindsym $mod+Control+k exec ~/.config/sway/keybinds.sh
 
 #
 # Status Bar:
