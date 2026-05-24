@@ -1,4 +1,7 @@
 #!/bin/bash
+# Screenshot script for Sway
+# Select region with slurp, then copy to clipboard or save to file
+
 dir="$HOME/Imágenes/screenshots"
 mkdir -p "$dir"
 file="$dir/$(date '+%Y-%m-%d_%H-%M-%S').png"
