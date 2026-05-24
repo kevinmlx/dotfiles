@@ -1,14 +1,20 @@
 #!/bin/bash
+# Screen recording script for Sway
+# First call: select option and region, start recording
+# Second call: stop recording
+
 dir="$HOME/Vídeos/screenshots"
 mkdir -p "$dir"
 pidfile="/tmp/sway-recording.pid"
 
+# Stop existing recording
 if [ -f "$pidfile" ] && kill -0 "$(cat "$pidfile")" 2>/dev/null; then
     kill -INT "$(cat "$pidfile")" && rm -f "$pidfile"
     notify-send "Grabacion terminada" "Guardada en $dir"
     exit 0
 fi
 
+# Choose recording type
 choice=$(printf "Solo video\nVideo + audio" | wmenu -l 2 -p "Tipo:") || exit 1
 
 case "$choice" in
