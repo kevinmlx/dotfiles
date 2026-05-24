@@ -1,4 +1,7 @@
 #!/bin/bash
+# Application launcher for Sway
+# Lists all available binaries and launches them (respecting Terminal=true in .desktop files)
+
 app=$(ls /usr/bin /usr/local/bin ~/.local/bin 2>/dev/null | sort -u | wmenu -p "Run:")
 [ -z "$app" ] && exit 1
 
