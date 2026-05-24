@@ -1,6 +1,11 @@
 #!/bin/bash
+# PipeWire volume monitor for Sway
+# Watches for external volume changes and syncs them to swayosd-client
+# This ensures the OSD shows the correct volume when changed via hardware keys or other apps
+
 pidfile="/tmp/sway-volume-monitor.pid"
 
+# Kill previous instance
 if [ -f "$pidfile" ] && kill -0 "$(cat "$pidfile")" 2>/dev/null; then
     kill "$(cat "$pidfile")"
     sleep 0.2
